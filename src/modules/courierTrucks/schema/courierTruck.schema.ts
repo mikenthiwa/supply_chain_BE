@@ -1,7 +1,14 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
+import { CourierTruckStatus } from '../courierTruckStatus.enum';
 
-@Schema()
+@Schema({
+  toJSON: {
+    transform: (doc, ret) => {
+      delete ret.__v;
+    },
+  },
+})
 export class CourierTruck extends Document {
   @Prop()
   name: string;
@@ -12,7 +19,7 @@ export class CourierTruck extends Document {
   @Prop()
   statusHistory: [
     {
-      status: string;
+      status: CourierTruckStatus;
       timestamp: Date;
     },
   ];
