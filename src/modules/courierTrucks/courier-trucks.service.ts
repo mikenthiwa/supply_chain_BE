@@ -56,6 +56,7 @@ export class CourierTrucksService {
         HttpStatus.BAD_REQUEST,
       );
     }
+    await courierTruck.save();
     const { _id, ...result } = courierTruck.toObject();
     return { ...result };
   }

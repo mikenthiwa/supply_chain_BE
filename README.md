@@ -22,52 +22,90 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Supply Chain Backend
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is a NestJS backend application for managing supply chain operations. The application is designed to handle the creation of orders and track the status of courier trucks.
+
+## Features
+
+- Create an order
+- Assign a courier truck to an order
+- Get the status history of a courier truck
+- Update the status of a courier truck
+
+## Prerequisites
+
+Before running this application, make sure you have the following tools installed:
+
+- [Node.js](https://nodejs.org/en/download/) (version 14.x or higher)
+- [Yarn](https://yarnpkg.com/getting-started/install)
+- [Docker](https://docs.docker.com/engine/install/ubuntu/) (optional)
 
 ## Installation
 
-```bash
-$ yarn install
+1. Clone the repository:
+
+```sh
+git clone https://github.com/your_username/supply_chain_BE.git
 ```
 
-## Running the app
+2. Change to the project directory:
 
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+```sh
+cd supply_chain_BE
 ```
 
-## Test
+3. Install the dependencies:
 
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+```sh
+yarn install
 ```
 
-## Support
+## Running the Application
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+You can run the application using either Yarn or Docker.
 
-## Stay in touch
+### Using Yarn
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+To run the application in development mode, use the following command:
+
+```sh
+yarn start:dev
+```
+
+The application will start and listen on port 3000.
+
+### Using Docker
+
+1. Build the Docker image:
+
+```sh
+docker build -t supply-chain .
+```
+
+2. Run the Docker container:
+
+```sh
+docker run -p 3000:3000 supply-chain
+```
+
+The application will start and listen on port 3000.
+
+## API Documentation
+
+The API documentation is available at `http://localhost:3000/api`.
+
+## Contributing
+
+If you'd like to contribute to this project, please follow the standard Git workflow:
+
+1. Fork the repository
+2. Create a new branch for your feature or bugfix
+3. Commit your changes
+4. Open a pull request against the main branch
+
+Please make sure to follow the code style and write tests for any new features or changes.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is unlicensed and free to use for any purpose.
