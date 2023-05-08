@@ -41,6 +41,13 @@ Before running this application, make sure you have the following tools installe
 - [Yarn](https://yarnpkg.com/getting-started/install)
 - [Docker](https://docs.docker.com/engine/install/ubuntu/) (optional)
 
+## Environment Variables
+The application requires certain environment variables to function correctly. You can create a .development.env file in the root folder of the project to configure these variables for development.
+```sh
+MONGODB_URI=mongodb+srv://admin:Kenya2019@supply-chain.g3ygxak.mongodb.net/?retryWrites=true&w=majority
+```
+
+
 ## Installation
 
 1. Clone the repository:
